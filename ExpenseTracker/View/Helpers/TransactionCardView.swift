@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TransactionCardView: View {
+    
+    @Environment(\.modelContext) private var context
+    
     var transaction: Transaction
     var body: some View {
         HStack(spacing: 12) {
@@ -32,6 +35,9 @@ struct TransactionCardView: View {
             }
             .lineLimit(1)
             .hSpacing(.leading)
+            
+            Text("$\(transaction.amount)")
+                .fontWeight(.bold)
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 10)
