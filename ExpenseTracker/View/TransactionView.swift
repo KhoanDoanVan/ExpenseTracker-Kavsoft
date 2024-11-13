@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewExpenseView: View {
+struct TransactionView: View {
     
     /// Env properties
     @Environment(\.modelContext) private var context
@@ -184,6 +184,6 @@ struct NewExpenseView: View {
 
 #Preview {
     NavigationStack {
-        NewExpenseView()
+        TransactionView()
     }
 }
